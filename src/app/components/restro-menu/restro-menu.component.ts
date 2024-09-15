@@ -30,12 +30,12 @@ export class RestroMenuComponent implements OnInit {
   });
   // Populate menu items for demonstration purposes
   this.menu = [
-    { name: 'Burger', imageUrl: '/assets/lefteris-kallergis-rbcvIrxw6KA-unsplash.jpg', price: 5.99,quantity:1 },
-    { name: 'Pizza', imageUrl: '/assets/food_delivery.jpg', price: 10.99,quantity:1 },
-    { name: 'Salad', imageUrl: '/assets/brooke-lark-oaz0raysASk-unsplash.jpg', price: 7.99,quantity:1  },
-    { name: 'Dessert', imageUrl: '/assets/dani-rendina-zcJEvX2hX8M-unsplash.jpg', price: 5.99,quantity:1  },
-    { name: 'Noodles', imageUrl: '/assets/brooke-lark--F_5g8EEHYE-unsplash.jpg', price: 10.99,quantity:1  },
-    { name: 'Sandwich', imageUrl: '/assets/cristina-matos-albers-S4dXp25NiLg-unsplash.jpg', price: 7.99,quantity:1  },
+    { name: 'Burger', imageUrl: 'assets/lefteris-kallergis-rbcvIrxw6KA-unsplash.jpg', price: 5.99,quantity:1 },
+    { name: 'Pizza', imageUrl: 'assets/food_delivery.jpg', price: 10.99,quantity:1 },
+    { name: 'Salad', imageUrl: 'assets/brooke-lark-oaz0raysASk-unsplash.jpg', price: 7.99,quantity:1  },
+    { name: 'Dessert', imageUrl: 'assets/dani-rendina-zcJEvX2hX8M-unsplash.jpg', price: 5.99,quantity:1  },
+    { name: 'Noodles', imageUrl: 'assets/brooke-lark--F_5g8EEHYE-unsplash.jpg', price: 10.99,quantity:1  },
+    { name: 'Sandwich', imageUrl: 'assets/cristina-matos-albers-S4dXp25NiLg-unsplash.jpg', price: 7.99,quantity:1  },
 
   ];
 
