@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('/assets/food_delivery.jpg'); /* Direct image URL from Unsplash */
+  background-image: url('../../../assets/food_delivery.jpg'); /* Direct image URL from Unsplash */
   background-size: cover;
   background-position: center;
   height: 100vh;
