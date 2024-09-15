@@ -1,0 +1,60 @@
+
+
+  .search-box {
+    width: 100%;
+  }
+
+  .restaurant-list {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  }
+
+  .restaurant {
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  .restaurant img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+
+
+  .restaurant-details {
+    margin-top: 10px;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .delivery-time {
+    color: #666;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurant {
+    width: calc(100% / 7); /* Adjust the width based on the number of restaurants per row */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .row-break {
+    width: 100%; /* Set the width to 100% to break to the next row */
+    height: 0; /* Hide the row break */
+    clear: both; /* Ensure that the row break clears both floats */
+  }
+
+
+
+
+
+

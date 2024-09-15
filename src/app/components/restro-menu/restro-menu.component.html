@@ -1,0 +1,50 @@
+<div class="container">
+  <mat-toolbar color="primary">{{ restaurantName }}</mat-toolbar>
+</div>
+<mat-form-field appearance="fill">
+  <input
+    matInput
+    type="text"
+    placeholder="Filter for food items..."
+    class="search-box"
+    [(ngModel)]="searchQuery"
+    (input)="searchMenuItems()"
+  />
+</mat-form-field>
+<div class="menu-list">
+  <div *ngFor="let item of filteredMenu" class="menu-item">
+    <img [src]="item.imageUrl" alt="Food Image" />
+    <div class="item-details">
+      <div class="name">{{ item.name }}</div>
+      <div class="price">Price: {{ item.price }}</div>
+      <div class="quantity-controls">
+        <button mat-icon-button (click)="decreaseQuantity(item)">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <span class="quantity">{{ item.quantity || 0 }}</span>
+        <button mat-icon-button (click)="increaseQuantity(item)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      </div>
+  </div>
+</div>
+<div class="final-price-container" *ngIf="selectedItems.length > 0">
+  <span class="final-price">
+    <span class="label">Final Price:</span>
+    <span class="price">{{ calculateFinalPrice() | currency }}</span>
+  </span>
+  <!-- Add to Cart Button -->
+<div class="add-to-cart-container" *ngIf="selectedItems.length > 0">
+  <button mat-raised-button color="primary" (click)="addToCart()">Add to Cart</button>
+</div>
+  
+  <button
+    mat-raised-button
+    color="warn"
+    class="place-order"
+    (click)="placeOrder()"
+  >
+    Place Order
+  </button>
+</div>

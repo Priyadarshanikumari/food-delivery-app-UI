@@ -1,0 +1,22 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+    <div *ngIf="cartItems.length > 0">
+      <ul>
+
+        <li *ngFor="let item of cartItems" class="cart-item">
+            <img [src]="item.imageUrl" alt="{{ item.name }}" class="item-image" />
+            <div class="item-details">
+                <div class="item-name">{{ item.name }}</div>
+                <div class="item-quantity">Quantity: {{ item.quantity }}</div>
+                <div class="item-price">Price: {{ item.price | currency }}</div>
+            </div>
+        </li>
+      </ul>
+      <h3>Total: {{ total | currency }}</h3>
+      <button mat-raised-button color="warn" (click)="placeOrder()">Place Order</button>
+    </div>
+  </div>
+  

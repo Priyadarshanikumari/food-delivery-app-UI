@@ -1,0 +1,14 @@
+<!-- payment-form.component.html -->
+<div class="payment-form-container">
+  <form (ngSubmit)="onSubmit()">
+    <!-- Stripe Elements will inject the card element here -->
+    <div id="card-element"></div>
+
+    <!-- Display errors for card details -->
+    <mat-error *ngIf="cardError">{{ cardError }}</mat-error>
+
+    <button mat-raised-button color="primary" type="submit">
+      Submit Payment
+    </button>
+  </form>
+</div>

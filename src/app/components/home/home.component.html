@@ -1,0 +1,35 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Food Delivery!</h1>
+    <p>
+      Order from your favorite restaurants and enjoy delicious meals delivered
+      to your doorstep.
+    </p>
+    <button class="btn btn-primary" (click)="navigateToRestroList()">
+      Explore Restaurants
+    </button>
+
+    <div class="button-group">
+      <button class="btn btn-secondary" (click)="navigateToLogin()">
+        Login
+      </button>
+      <button class="btn btn-secondary" (click)="navigateToSignUp()">
+        Sign Up
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="featured-restaurants">
+  <h2>Featured Restaurants</h2>
+  <div class="restaurant-cards">
+    <div class="restaurant-card" *ngFor="let restaurant of featuredRestaurants">
+      <img [src]="restaurant.imageUrl" alt="{{ restaurant.name }}" />
+      <div class="restaurant-details">
+        <h3>{{ restaurant.name }}</h3>
+        <p>Cuisine: {{ restaurant.cuisine }}</p>
+        <!-- Add more restaurant details if needed -->
+      </div>
+    </div>
+  </div>
+</section>

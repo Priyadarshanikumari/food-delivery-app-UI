@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center; /* Horizontal center alignment */
+  align-items: center; /* Vertical center alignment */
+  height: 100vh; /* Adjust the height of the container */
+  background-image: url('/assets/food_delivery.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire container */
+}
+
+/* Style the form fields */
+.form-field {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px; /* Limit the width of the form */
+}

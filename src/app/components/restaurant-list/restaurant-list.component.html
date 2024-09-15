@@ -1,0 +1,33 @@
+<mat-form-field appearance="fill">
+  <input
+    matInput
+    type="text"
+    placeholder="Filter Restaurant"
+    class="search-box"
+    (input)="searchRestaurants($event)"
+  />
+</mat-form-field>
+
+<h1>{{ welcomeMessage }}</h1>
+
+<div class="container">
+  <!-- Iterate over restaurants -->
+  <div
+    class="restaurant"
+    *ngFor="let restaurant of filteredRestaurants; let i = index"
+  >
+    <!-- Restaurant card content -->
+    <a [routerLink]="['/menu', restaurant.name]">
+      <img [src]="restaurant.imageUrl" alt="Restaurant Image" />
+      <div class="restaurant-details">
+        <div class="name">{{ restaurant.name }}</div>
+        <div class="discount">{{ restaurant.discount }}</div>
+        <div class="delivery-time">
+          Delivery Time: {{ restaurant.deliveryTime }}
+        </div>
+      </div>
+    </a>
+    <!-- Move to the next row if there isn't enough space in the current row -->
+    <div *ngIf="(i + 1) % 7 === 0" class="row-break"></div>
+  </div>
+</div>

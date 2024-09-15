@@ -1,0 +1,35 @@
+/* payment-form.component.css */
+/* .payment-form-container {
+  background-image: url('/assets/food_delivery.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+} */
+
+form {
+  width: 300px; /* Set the width of the form */
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px; /* Add spacing between input fields */
+}
+
+button {
+  width: 100%;
+}
+
+#card-element {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.mat-error {
+  color: red;
+}
+
